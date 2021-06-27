@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceConverter.Api", "PriceConverter.Api\PriceConverter.Api.csproj", "{D81C1978-3E8F-4316-A43A-97AED4C9CBA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceConverter.Core", "PriceConverter.Core\PriceConverter.Core.csproj", "{197C3CB4-DEDD-4A15-8B5A-AA60D60A907A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceConverter.Core.UnitTests", "PriceConverter.Core.UnitTests\PriceConverter.Core.UnitTests.csproj", "{12B3E849-8D48-4242-9BEA-0C140FFE46F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D81C1978-3E8F-4316-A43A-97AED4C9CBA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81C1978-3E8F-4316-A43A-97AED4C9CBA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81C1978-3E8F-4316-A43A-97AED4C9CBA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81C1978-3E8F-4316-A43A-97AED4C9CBA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{197C3CB4-DEDD-4A15-8B5A-AA60D60A907A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197C3CB4-DEDD-4A15-8B5A-AA60D60A907A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197C3CB4-DEDD-4A15-8B5A-AA60D60A907A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197C3CB4-DEDD-4A15-8B5A-AA60D60A907A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B3E849-8D48-4242-9BEA-0C140FFE46F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B3E849-8D48-4242-9BEA-0C140FFE46F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B3E849-8D48-4242-9BEA-0C140FFE46F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B3E849-8D48-4242-9BEA-0C140FFE46F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

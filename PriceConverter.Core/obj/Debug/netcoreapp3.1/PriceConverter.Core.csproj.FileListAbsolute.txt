@@ -1,0 +1,9 @@
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/bin/Debug/netcoreapp3.1/PriceConverter.Core.deps.json
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/bin/Debug/netcoreapp3.1/PriceConverter.Core.dll
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/bin/Debug/netcoreapp3.1/PriceConverter.Core.pdb
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/obj/Debug/netcoreapp3.1/PriceConverter.Core.csproj.AssemblyReference.cache
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/obj/Debug/netcoreapp3.1/PriceConverter.Core.AssemblyInfoInputs.cache
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/obj/Debug/netcoreapp3.1/PriceConverter.Core.AssemblyInfo.cs
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/obj/Debug/netcoreapp3.1/PriceConverter.Core.csproj.CoreCompileInputs.cache
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/obj/Debug/netcoreapp3.1/PriceConverter.Core.dll
+/Users/ralphtima/RiderProjects/PriceConverter/PriceConverter.Core/obj/Debug/netcoreapp3.1/PriceConverter.Core.pdb
