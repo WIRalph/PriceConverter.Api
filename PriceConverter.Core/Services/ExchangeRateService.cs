@@ -18,6 +18,9 @@ namespace PriceConverter.Core.Services
 
         public async Task<decimal> CalculateCurrentPrice(PriceConversionRequest priceRequest)
         {
+            if (priceRequest == null)
+                return 0;
+            
             var currentRates = await _trainlineExchangeHandler.GetRates(priceRequest.SourceCurrency);
             if (currentRates == null)
                 return 0;

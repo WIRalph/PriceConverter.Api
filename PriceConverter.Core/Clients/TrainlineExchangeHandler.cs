@@ -19,7 +19,7 @@ namespace PriceConverter.Core.Clients
         {
             var urlPath = $"/exchangerates/api/latest/{currency}.json";
             var request = CreateGetRequest(urlPath);
-            using var client = CreateHttpClient(_httpClient);
+            using var client = CreateHttpClient();
             var response = await client.SendAsync(request);
             return await ReadResponse<CurrencyExchangeRateResponse>(response);
         }
@@ -34,7 +34,7 @@ namespace PriceConverter.Core.Clients
             return httpRequest;
         }
         
-        private HttpClient CreateHttpClient(IHttpClientFactory _httpClient)
+        private HttpClient CreateHttpClient()
         {
             var client = _httpClient.CreateClient();
             client.BaseAddress = new Uri(BaseRequestUrl());
