@@ -18,7 +18,7 @@ namespace PriceConverter.Core.UnitTests
         }
 
         [Test]
-        public async Task CalculateCurrentPrice_ValidParams_ValidResponse()
+        public async Task ConvertCurrentPrice_ValidParams_ValidResponse()
         {
             //arrange
             var priceConversionRequest = new PriceConversionRequest
@@ -44,6 +44,29 @@ namespace PriceConverter.Core.UnitTests
             
             //assert
             Assert.AreEqual(convertedPriceResponse.Currency, response.Currency);
+        }
+        
+        [Test]
+        public async Task ConvertCurrentPrice_InValidCurrency_ReturnsNull()
+        {
+            //arrange
+            var priceConversionRequest = new PriceConversionRequest
+            {
+                Price = 1,
+                SourceCurrency = "MOP",
+                TargetCurrency = "TNT"
+            };
+
+            _exchangeRateServiceMock.Setup(e =>
+                e.CalculateCurrentPrice(priceConversionRequest)).ReturnsAsync(0);
+            
+            var priceCurrencyConverterService = new PriceConverterService(_exchangeRateServiceMock.Object);
+            
+            //act
+            var response = await priceCurrencyConverterService.ConvertPrice(priceConversionRequest);
+            
+            //assert
+            Assert.IsNull(response);
         }
     }
 }

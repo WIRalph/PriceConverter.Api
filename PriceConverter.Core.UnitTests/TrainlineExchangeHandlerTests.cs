@@ -56,5 +56,37 @@ namespace PriceConverter.Core.UnitTests
             //assert
             Assert.IsInstanceOf<CurrencyExchangeRateResponse>(response);
         }
+        
+        [Test]
+        public async Task GetExchangeRate_InValidParam_ReturnsNotFound404()
+        {
+            //arrange
+            _handlerMock = new Mock<HttpMessageHandler>(MockBehavior.Default);
+            _handlerMock
+                .Protected()
+                .Setup<Task<HttpResponseMessage>>(
+                    "SendAsync",
+                    ItExpr.IsAny<HttpRequestMessage>(),
+                    ItExpr.IsAny<CancellationToken>()
+                )
+                .ReturnsAsync(new HttpResponseMessage()
+                {
+                    StatusCode = HttpStatusCode.NotFound,
+                })
+                .Verifiable();
+            _httpClient = new HttpClient(_handlerMock.Object)
+            {
+                BaseAddress = new Uri("https://testuri.mock"),
+            };
+            mockHttpClientFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(_httpClient);
+            
+            TrainlineExchangeHandler trainlineExchangeHandler = new TrainlineExchangeHandler(mockHttpClientFactory.Object);
+            
+            //act
+            var response = await trainlineExchangeHandler.GetRates("TGT");
+                
+            //assert
+            Assert.IsNull(response);
+        }
     }
 }

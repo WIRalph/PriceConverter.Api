@@ -15,6 +15,8 @@ namespace PriceConverter.Core.Services
         public async Task<ConvertedPriceResponse> ConvertPrice(PriceConversionRequest priceRequest)
         {
             var currentPrice = await _exchangeRateService.CalculateCurrentPrice(priceRequest);
+            if (currentPrice == 0)
+                return null;
             
             var price = new ConvertedPriceResponse
             {

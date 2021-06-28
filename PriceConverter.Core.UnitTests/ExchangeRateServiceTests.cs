@@ -20,7 +20,7 @@ namespace PriceConverter.Core.UnitTests
         }
 
         [Test]
-        public async Task ConvertPrice_ReturnsValidDecimal()
+        public async Task CalculateCurrentPrice_ValidParams_ReturnsNumberGreaterThanZero()
         {
             var priceConversionRequest = new PriceConversionRequest
             {
@@ -50,6 +50,39 @@ namespace PriceConverter.Core.UnitTests
             var result = await exchangeRateService.CalculateCurrentPrice(priceConversionRequest);
             
             Assert.IsInstanceOf<decimal>(result);
+        }
+        
+        [Test]
+        public async Task CalculateCurrentPrice_InvalidTargetCurrency_ReturnsZero()
+        {
+            var priceConversionRequest = new PriceConversionRequest
+            {
+                Price = 1,
+                SourceCurrency = "EUR",
+                TargetCurrency = "TNT"
+            };
+            var currencyExchangeRateResponse = new CurrencyExchangeRateResponse
+            {
+                Base = "GBP",
+                Date = "2021-06-26",
+                UpdatedAt = 029930303,
+                Rates = new Dictionary<string, decimal>()
+                {
+                    {"EUR", 1},
+                    {"GBP", 1},
+                    {"USD", 1}
+                }
+            };
+            
+            _trainlineExchangeHandler.Setup(t =>
+                    t.GetRates("EUR"))
+                .ReturnsAsync(currencyExchangeRateResponse);
+
+            var exchangeRateService = new ExchangeRateService(_trainlineExchangeHandler.Object);
+
+            var result = await exchangeRateService.CalculateCurrentPrice(priceConversionRequest);
+            
+            Assert.AreEqual(0, result);
         }
     }
 }

@@ -19,14 +19,15 @@ namespace PriceConverter.Core.Services
         public async Task<decimal> CalculateCurrentPrice(PriceConversionRequest priceRequest)
         {
             var currentRates = await _trainlineExchangeHandler.GetRates(priceRequest.SourceCurrency);
+            if (currentRates == null)
+                return 0;
             
             var found = currentRates.Rates.TryGetValue(priceRequest.TargetCurrency, out decimal rate);
             if (!found)
-                throw new ArgumentNullException("Rate not found");
+                return 0;
 
             var currentPrice = priceRequest.Price * rate;
             return currentPrice;
         }
-        
     }
 }

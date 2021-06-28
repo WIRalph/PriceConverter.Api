@@ -2,5 +2,14 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=34d9769d_002D21fb_002D4711_002D8bf3_002D52efcc5efa73/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ConvertPrice_ReturnsValidDecimal" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.ExchangeRateServiceTests.ConvertPrice_ReturnsValidDecimal&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::0A939CBD-C578-46FD-B3CF-365EAE21F512::.NETCoreApp,Version=v3.1::PriceConverter.Api.UnitTests.PriceConverterControllerTests.TestRequest_ReturnsData_StatusCode200&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::0A939CBD-C578-46FD-B3CF-365EAE21F512::.NETCoreApp,Version=v3.1::PriceConverter.Api.UnitTests.PriceConverterControllerTests.TestRequest_ReturnsValidData_StatusCode200&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.PriceConverterServiceTests.CalculateCurrentPrice_ValidParams_ValidResponse&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.TrainlineExchangeHandlerTests.GetExchangeRate_ValidParam_ReturnsObject&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::0A939CBD-C578-46FD-B3CF-365EAE21F512::.NETCoreApp,Version=v3.1::PriceConverter.Api.UnitTests.PriceConverterControllerTests.TestInvalidCurrencyRequest_ReturnsNotFound_StatusCode404&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.TrainlineExchangeHandlerTests.GetExchangeRate_InValidParam_ReturnsNotFound404&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.PriceConverterServiceTests.ConvertCurrentPrice_InValidCurrency_ValidResponse&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.PriceConverterServiceTests.ConvertCurrentPrice_InValidCurrency_ReturnsNull&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::12B3E849-8D48-4242-9BEA-0C140FFE46F6::.NETCoreApp,Version=v3.1::PriceConverter.Core.UnitTests.ExchangeRateServiceTests.CalculateCurrentPrice_InvalidTargetCurrency_ReturnsZero&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
